@@ -33,7 +33,7 @@ export default function BookCreate() {
     fetchData();
   }, []);
 
-  const handeChange = (e) => {
+  const handleChange = (e) => {
     const { name, value, files } = e.target;
 
     if (name === "cover_photo") {
@@ -87,7 +87,7 @@ export default function BookCreate() {
                   name="title"
                   id="title"
                   value={formData.title}
-                  onChange={handeChange}
+                  onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                   placeholder="Book Title"
                   required
@@ -105,7 +105,7 @@ export default function BookCreate() {
                   name="price"
                   id="price"
                   value={formData.price}
-                  onChange={handeChange}
+                  onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                   placeholder="e.g. 150000"
                   required
@@ -123,7 +123,7 @@ export default function BookCreate() {
                   name="stock"
                   id="stock"
                   value={formData.stock}
-                  onChange={handeChange}
+                  onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-600 focus:border-indigo-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                   placeholder="e.g. 20"
                   required
@@ -140,7 +140,7 @@ export default function BookCreate() {
                   id="genre_id"
                   name="genre_id"
                   value={formData.genre_id}
-                  onChange={handeChange}
+                  onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                 >
                   <option value="">--Select genre--</option>
@@ -162,7 +162,7 @@ export default function BookCreate() {
                   id="author_id"
                   name="author_id"
                   value={formData.author_id}
-                  onChange={handeChange}
+                  onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                 >
                   <option value="">--Select author--</option>
@@ -185,7 +185,7 @@ export default function BookCreate() {
                   name="cover_photo"
                   id="cover_photo"
                   accept="image/*"
-                  onChange={handeChange}
+                  onChange={handleChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full cursor-pointer dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                   required
                 />
@@ -201,7 +201,7 @@ export default function BookCreate() {
                   id="description"
                   name="description"
                   value={formData.description}
-                  onChange={handeChange}
+                  onChange={handleChange}
                   rows="6"
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                   placeholder="Write a description of the book..."

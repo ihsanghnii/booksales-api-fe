@@ -17,7 +17,7 @@ export default function AdminAuthors() {
   }, []);
 
   const toggleDropdown = (id) => {
-    setOpenDropdownId(openDropdownId) === id ? null : id;
+    setOpenDropdownId(openDropdownId === id ? null : id);
   };
 
   return (
@@ -58,7 +58,7 @@ export default function AdminAuthors() {
             </div>
             <div className="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
               <Link
-                to={"/admin/authors/create"}
+                to={"/admin/genres/create"}
                 className="flex items-center justify-center text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none dark:focus:ring-indigo-800"
               >
                 <svg
@@ -74,7 +74,7 @@ export default function AdminAuthors() {
                     d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                   />
                 </svg>
-                Add Author
+                Add author
               </Link>
             </div>
           </div>
@@ -86,7 +86,10 @@ export default function AdminAuthors() {
                     Name
                   </th>
                   <th scope="col" className="px-4 py-3">
-                    Description
+                    Photo
+                  </th>
+                  <th scope="col" className="px-4 py-3">
+                    Bio
                   </th>
                   <th scope="col" className="px-4 py-3">
                     <span className="sr-only">Actions</span>
@@ -139,7 +142,7 @@ export default function AdminAuthors() {
                             >
                               <li>
                                 <Link
-                                  to={`/admin/author/edit/${author.id}`}
+                                  to={`/admin/authors/edit/${author.id}`}
                                   className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                 >
                                   Edit
