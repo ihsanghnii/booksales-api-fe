@@ -71,7 +71,7 @@ export default function GenreCreate() {
                   onChange={handleChange}
                   rows="6"
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
-                  placeholder="Write a description of the book..."
+                  placeholder="Write a description of the genre..."
                 ></textarea>
               </div>
             </div>
