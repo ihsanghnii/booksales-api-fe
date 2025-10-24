@@ -3,6 +3,7 @@ import { deleteBook, getBooks } from "../../../_services/books";
 import { getGenres } from "../../../_services/genres";
 import { getAuthors } from "../../../_services/authors";
 import { Link } from "react-router-dom";
+import { BookImgStorage } from "../../../_api";
 
 export default function AdminBooks() {
   const [books, setBooks] = useState([]); //untuk simpan data
@@ -152,7 +153,13 @@ export default function AdminBooks() {
                       </th>
                       <td className="px-4 py-3">{book.price}</td>
                       <td className="px-4 py-3">{book.stock}</td>
-                      <td className="px-4 py-3">{book.cover_photo}</td>
+                      <td className="px-4 py-3">
+                        <img
+                          className="h-24"
+                          src={`${BookImgStorage}/${book.cover_photo}`}
+                          alt=""
+                        />
+                      </td>
                       <td className="px-4 py-3">
                         {getGenreName(book.genre_id)}
                       </td>

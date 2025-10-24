@@ -8,3 +8,4 @@ export const API = axios.create({
 })
 
 export const BookImgStorage = `${url}/storage/books`;
+export const AuthorImgStorage = `${url}/storage/authors`;
