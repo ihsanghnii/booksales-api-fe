@@ -22,3 +22,16 @@ export const createTransaction = async (data) => {
     throw error
   }
 }
+
+export const deleteTransaction = async (id) => {
+  try {
+    await API.delete(`/transactions/${id}`, {
+      headers: {
+        "Authorization": `Bearer ${localStorage.getItem('accessToken')}`
+      }
+    })
+  } catch (error) {
+    console.log(error);
+    throw error
+  }
+}

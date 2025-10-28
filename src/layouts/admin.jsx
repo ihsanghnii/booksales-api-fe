@@ -277,7 +277,7 @@ export default function AdminLayout() {
               </li>
               <li>
                 <Link
-                  to={"admin/transactions"}
+                  to={"/admin/transactions"}
                   className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
                 >
                   <svg
