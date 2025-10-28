@@ -30,7 +30,7 @@ export default function Register() {
       navigate("/login");
     } catch (error) {
       const errorData = error?.response?.data;
-      // untuk pesen errornya
+      // untuk pesan errornya
       const errorMessage =
         errorData.message ||
         errorData.name ||
